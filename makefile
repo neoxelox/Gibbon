@@ -1,5 +1,11 @@
 PACKAGES ?= ./...
 
+GOTOOLS  ?= github.com/GeertJohan/fgt \
+			golang.org/x/tools/cmd/goimports \
+			github.com/kisielk/errcheck \
+			golang.org/x/lint/golint \
+			honnef.co/go/tools/cmd/staticcheck 
+
 run:
 	go run main.go
 
