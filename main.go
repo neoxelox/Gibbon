@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"os/user"
+
+	"github.com/Neoxelox/monkey-interpreter/repl"
+)
 
 func main() {
-	fmt.Println("Hi")
+	user, err := user.Current()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("Hello %s! This is the Monkey programming language!\n", user.Username)
+	repl.Start(os.Stdin, os.Stdout)
 }
