@@ -3,8 +3,8 @@ package lexer_test
 import (
 	"testing"
 
-	"github.com/Neoxelox/monkey-interpreter/lexer"
-	"github.com/Neoxelox/monkey-interpreter/token"
+	"Gibbon/lexer"
+	"Gibbon/token"
 )
 
 func TestNextToken(t *testing.T) {

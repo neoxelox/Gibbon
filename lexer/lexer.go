@@ -1,6 +1,8 @@
 package lexer
 
-import "github.com/Neoxelox/monkey-interpreter/token"
+import (
+	"Gibbon/token"
+)
 
 type Lexer struct {
 	input        string

@@ -4,8 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"github.com/Neoxelox/monkey-interpreter/token"
-	"github.com/Neoxelox/monkey-interpreter/lexer"
+
+	"Gibbon/lexer"
+	"Gibbon/token"
 )
 
 const (

@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"github.com/Neoxelox/monkey-interpreter/token"
+	"Gibbon/token"
 )
 
 type Node interface {

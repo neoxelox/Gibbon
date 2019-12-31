@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/Neoxelox/monkey-interpreter/repl"
+	"Gibbon/repl"
 )
 
 func main() {

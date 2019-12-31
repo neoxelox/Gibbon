@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"github.com/Neoxelox/monkey-interpreter/ast"
-	"github.com/Neoxelox/monkey-interpreter/lexer"
-	"github.com/Neoxelox/monkey-interpreter/token"
+	"Gibbon/ast"
+	"Gibbon/lexer"
+	"Gibbon/token"
 )
 
 type Parser struct {
