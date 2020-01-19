@@ -25,4 +25,4 @@ jobs:
         fi
 
     - name: Test
-      run: make check
+      run: make test
