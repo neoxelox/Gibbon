@@ -25,4 +25,7 @@ jobs:
       run: make test
     
     - name: Pass lint
-      run: make lint
+      run: |
+        make tools
+        ls $GOPATH
+        ls
