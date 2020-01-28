@@ -6,13 +6,14 @@ import (
 	"Gibbon/token"
 )
 
+// Parser describes a Parser instance.
 type Parser struct {
-	l *lexer.Lexer
-
+	l         *lexer.Lexer
 	curToken  token.Token
 	peekToken token.Token
 }
 
+// New creates a Parser instance.
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{l: l}
 
@@ -22,11 +23,12 @@ func New(l *lexer.Lexer) *Parser {
 	return p
 }
 
+// ParseProgram ...
+func (p *Parser) ParseProgram() *ast.Program {
+	return nil
+}
+
 func (p *Parser) nextToken() {
 	p.curToken = p.peekToken
 	p.peekToken = p.l.NextToken()
-}
-
-func (p *Parser) ParseProgram() *ast.Program {
-	return nil
 }

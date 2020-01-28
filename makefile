@@ -11,6 +11,7 @@ run:
 
 test:
 	go test -race --count=1 $(PACKAGES)
+.PHONY: test
 
 check: test lint
 

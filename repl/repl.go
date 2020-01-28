@@ -5,19 +5,30 @@ import (
 	"fmt"
 	"io"
 
+	"Gibbon/cfg"
 	"Gibbon/lexer"
 	"Gibbon/token"
 )
 
-const (
-	PROMPT = ">> "
-)
+// Repl describes a Repl instance.
+// "read-eval-print loop"
+type Repl struct {
+	in  io.Reader
+	out io.Writer
+}
 
-func Start(in io.Reader, out io.Writer) {
-	scanner := bufio.NewScanner(in)
+// New creates a Repl instance.
+func New(in io.Reader, out io.Writer) *Repl {
+	r := &Repl{in: in, out: out}
+	return r
+}
+
+// Start inits the Repl instance.
+func (r *Repl) Start() {
+	scanner := bufio.NewScanner(r.in)
 
 	for {
-		fmt.Printf(PROMPT)
+		fmt.Printf(cfg.PROMPT)
 		scanned := scanner.Scan()
 		if !scanned {
 			return
